@@ -1,0 +1,22 @@
+body{
+  text-align: center;
+  font-size: 25pt;
+}
+
+button{
+  font-size: 25pt;
+}
+
+input{
+  font-size: 20pt;
+}
+
+.parent{
+  background-color: aliceblue;
+  padding: 15px;
+}
+
+.child{
+background-color: burlywood;
+margin: 15px;
+}
