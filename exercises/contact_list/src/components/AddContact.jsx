@@ -1,13 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const AddContact = (props) => {
+
+const AddContact = ({addContact}) => {
+
+    //State?
+    //Event Handlers?
 
     return (
-        <form onSubmit={() => props.removeContact()}>
+        <form onSubmit={(e) => {e.preventDefault()}}>
             <label htmlFor="name">Name</label>
-            <input required type="text" name="name" id="" placeholder="Name" />
+            <input required type="text" name="name" id="" placeholder="Name" 
+
+            />
             <label htmlFor="phone">Phone #</label>
-            <input required type="text" name="phone" id="" placeholder="###-###-####" />
+            <input required type="text" name="phone" id="" placeholder="###-###-####" 
+
+            />
             <button>Add Contact</button>
         </form>
     )
