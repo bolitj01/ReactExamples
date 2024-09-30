@@ -1,6 +1,6 @@
-import React, { useRef } from 'react'
+import { useRef } from 'react'
 
-const Flashcard = ({id, question, options, answer, choose}) => {
+const Flashcard = ({id, question, options, answer, choice, choose}) => {
 
     const cardRef = useRef(null);
 
@@ -9,7 +9,7 @@ const Flashcard = ({id, question, options, answer, choose}) => {
             <p>{question}</p>
             <ul>
                 {options.map((option, index) => {
-                    return <li  
+                    return <li {...(option === choice ? {style = {fontWeight: "bold"}} : {})}
                             key={index}    
                             onClick={() => {
                                 choose(id, option)
@@ -26,6 +26,16 @@ const Flashcard = ({id, question, options, answer, choose}) => {
             </ul>
         </div>
     )
+}
+
+//Specify prop types
+Flashcard.propTypes = {
+    id: PropTypes.number.isRequired,
+    question: PropTypes.string.isRequired,
+    options: PropTypes.array.isRequired,
+    answer: PropTypes.string.isRequired,
+    choice: PropTypes.string.isRequired,
+    choose: PropTypes.func.isRequired
 }
 
 export default Flashcard
