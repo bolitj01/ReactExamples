@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export default function Clock (props){
+export default function Clock ({delay}){
     const [time, setTime] = useState(new Date());
 
     useEffect(() => {
@@ -10,7 +10,7 @@ export default function Clock (props){
                 //Need to assign a new time instance
                 setTime(new Date());
             }
-        , props.delay);
+        , delay);
     
     }, []); //Empty [] indicates one execution only
     

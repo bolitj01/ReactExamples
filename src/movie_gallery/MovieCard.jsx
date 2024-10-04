@@ -1,8 +1,9 @@
-import React from 'react';
+import styles from "./MovieGallery.module.css";
+import PropTypes from "prop-types";
 
 const MovieCard = ({ movie: { imdbID, Year, Poster, Title, Type } }) => {
   return (
-    <div className="movie" key={imdbID}>
+    <div className={styles.movie} key={imdbID}>
       <div>
         <p>{Year}</p>
       </div>
@@ -18,5 +19,16 @@ const MovieCard = ({ movie: { imdbID, Year, Poster, Title, Type } }) => {
     </div>
   );
 }
+
+//Prop types
+MovieCard.propTypes = {
+  movie: PropTypes.shape({
+    imdbID: PropTypes.string,
+    Year: PropTypes.string,
+    Poster: PropTypes.string,
+    Title: PropTypes.string,
+    Type: PropTypes.string,
+  }),
+};
 
 export default MovieCard;

@@ -24,6 +24,12 @@ function ExampleNavigator() {
         </ul>
         <h3 className={styles.speed1}>Hooks</h3>
         <h4 className={styles.speed2}>Effects</h4>
+        <h4 className={styles.speed2}>Context</h4>
+        <ul>
+          <li className={styles.speed3}>
+            <Link to="/theme_context">Theme Context</Link>
+          </li>
+        </ul>
         <h4 className={styles.speed2}>Reducers</h4>
         <ul>
           <li className={styles.speed3}>
@@ -57,6 +63,15 @@ function ExampleNavigator() {
           </li>
           <li className={styles.speed2}>
             <Link to="/state">State</Link>
+          </li>
+        </ul>
+        <h3 className={styles.speed1}>Examples</h3>
+        <ul>
+          <li className={styles.speed2}>
+            <Link to="/tic_tac_toe">Tic Tac Toe</Link>
+          </li>
+          <li className={styles.speed2}>
+            <Link to="/movie_gallery">Movie Gallery</Link>
           </li>
         </ul>
       </div>

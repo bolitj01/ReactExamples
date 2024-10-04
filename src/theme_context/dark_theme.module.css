@@ -1,0 +1,17 @@
+/* DarkTheme.module.css */
+.container {
+    background-color: #0d0a5d;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .button {
+    background-color: #ffffff;
+    color: #333333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  

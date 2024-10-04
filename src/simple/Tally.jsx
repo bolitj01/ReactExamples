@@ -5,6 +5,7 @@ export default function Tally() {
 
   useEffect(() => {
     counter > 5 && alert(`Score ${counter} is above 5!`);
+    console.log(`Counter changed`);
   }, [counter]);
 
   return (

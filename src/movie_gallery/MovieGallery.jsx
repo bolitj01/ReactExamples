@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 import MovieCard from "./MovieCard";
 import SearchIcon from "./search.svg";
-import "./App.css";
+import "./MovieGallery.module.css";
+import styles from "./MovieGallery.module.css";
 
 const API_URL = "http://www.omdbapi.com?apikey=b6003d8a";
 
-const App = () => {
+const MovieGallery = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [movies, setMovies] = useState([]);
 
@@ -22,10 +23,10 @@ const App = () => {
   };
 
   return (
-    <div className="app">
-      <h1>MovieLand</h1>
+    <div className={`${styles.app} ${styles.body}`}>
+      <h1 className={styles.h1}>MovieLand</h1>
 
-      <div className="search">
+      <div className={styles.search}>
         <input
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
@@ -39,13 +40,13 @@ const App = () => {
       </div>
 
       {movies?.length > 0 ? (
-        <div className="container">
-          {movies.map((movie) => (
-            <MovieCard movie={movie} />
+        <div className={styles.container}>
+          {movies.map((movie, index) => (
+            <MovieCard key={index} movie={movie} />
           ))}
         </div>
       ) : (
-        <div className="empty">
+        <div className={styles.empty}>
           <h2>No movies found</h2>
         </div>
       )}
@@ -53,4 +54,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default MovieGallery;
