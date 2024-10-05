@@ -11,6 +11,7 @@ const MovieGallery = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [movies, setMovies] = useState([]);
 
+  // Fetch movies on initial render
   useEffect(() => {
     searchMovies("Batman");
   }, []);

@@ -24,6 +24,11 @@ function ExampleNavigator() {
         </ul>
         <h3 className={styles.speed1}>Hooks</h3>
         <h4 className={styles.speed2}>Effects</h4>
+        <ul>
+          <li className={styles.speed3}>
+            <Link to="/movie_gallery">Movie Gallery</Link>
+          </li>
+        </ul>
         <h4 className={styles.speed2}>Context</h4>
         <ul>
           <li className={styles.speed3}>
