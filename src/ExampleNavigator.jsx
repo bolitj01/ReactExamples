@@ -78,6 +78,9 @@ function ExampleNavigator() {
           <li className={styles.speed2}>
             <Link to="/movie_gallery">Movie Gallery</Link>
           </li>
+          <li className={styles.speed2}>
+            <Link to="/room_admin">Room Admin</Link>
+          </li>
         </ul>
       </div>
     </>

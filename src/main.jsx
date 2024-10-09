@@ -4,7 +4,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ExampleNavigator from "./ExampleNavigator.jsx";
 import Hello from "./hello_react/Hello.jsx";
 import Simple from "./simple/Simple.jsx";
-import ContactExercise from "./exercises/contact_list/ContactExercise.jsx";
+import ContactExercise from "./exercises/contact_list/solution/ContactExercise.jsx";
+import RoomAdmin from "./exercises/room_admin/RoomAdmin.jsx";
 import LSHExercise from "./exercises/local_storage_hook/LSHExercise.jsx";
 import PassingData from "./passing_data/PassingData.jsx";
 import SumHistory from "./sum_history/SumHistory.jsx";
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
     path: "/theme_context",
     element: <ThemedApp />,
   },
+  {
+    path: "/room_admin",
+    element: <RoomAdmin />,
+  }
   
 ]);
 
