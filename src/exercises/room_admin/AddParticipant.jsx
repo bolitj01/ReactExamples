@@ -1,12 +1,11 @@
 import { useRef } from "react";
+import styles from './styles/AddParticipant.module.css';
 
 const AddParticipant = ({ addParticipant }) => {
-  //State?
   const nameTxt = useRef()
-  //Event Handlers?
 
   return (
-    <form
+    <form className={styles.addParticipant}
       onSubmit={(e) => {
         e.preventDefault();
       }}

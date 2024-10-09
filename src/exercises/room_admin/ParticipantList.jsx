@@ -1,23 +1,24 @@
-// ParticipantList.jsx
+import styles from './styles/ParticipantList.module.css'; // Import the CSS module
+
 const ParticipantList = ({ participants }) => {
-    return (
-      <>
-        {participants.map((p, index) => {
-          return (
-            <div
-              key={index}
-              draggable
-              onDragStart={(e) => {
-                e.dataTransfer.setData('participantId', p.id); // Store participant ID when dragging starts
-              }}
-            >
-              <p>{p.name}</p>
-            </div>
-          );
-        })}
-      </>
-    );
-  };
-  
-  export default ParticipantList;
-  
+  return (
+    <div className={styles.participantList}>
+      {participants.map((p) => {
+        return (
+          <p
+            key={p.id}
+            draggable
+            onDragStart={(e) => {
+              e.dataTransfer.setData('participantId', p.id);
+            }}
+            className={styles.participantItem}
+          >
+            {p.name}
+          </p>
+        );
+      })}
+    </div>
+  );
+};
+
+export default ParticipantList;
