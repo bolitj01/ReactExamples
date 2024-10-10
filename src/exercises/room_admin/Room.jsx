@@ -1,18 +1,16 @@
-import styles from './styles/Room.module.css';
+import ParticipantCard from "./ParticipantCard";
+import styles from "./styles/Room.module.css";
 
-// Room.jsx
+// Room component that handles drag and drop of participants into the room
 const Room = ({ roomIndex, participants, addToRoom }) => {
-  
-  console.log("Rendering Room");
-
   const handleDrop = (e) => {
     e.preventDefault();
-    const participantId = e.dataTransfer.getData('participantId'); // Retrieve the participant ID
-    addToRoom(participantId, roomIndex); // Add the participant to the room
+    const participantId = e.dataTransfer.getData("participantId");
+    addToRoom(participantId, roomIndex);
   };
 
   const handleDragOver = (e) => {
-    e.preventDefault(); // Allow drop by preventing the default behavior
+    e.preventDefault(); // Allow the drop action
   };
 
   return (
@@ -23,9 +21,7 @@ const Room = ({ roomIndex, participants, addToRoom }) => {
     >
       <h3>Room {roomIndex + 1}</h3>
       {participants.map((participant) => (
-        <p key={participant.id} className={styles.participant}>
-          {participant.name}
-        </p>
+        <ParticipantCard key={participant.id} participant={participant} />
       ))}
     </div>
   );

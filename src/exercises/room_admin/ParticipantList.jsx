@@ -1,22 +1,15 @@
-import styles from './styles/ParticipantList.module.css'; // Import the CSS module
+import ParticipantCard from "./ParticipantCard";
+import styles from "./styles/ParticipantList.module.css";
 
+// ParticipantList component to display all participants not in any room
 const ParticipantList = ({ participants }) => {
   return (
     <div className={styles.participantList}>
-      {participants.map((p) => {
-        return (
-          <p
-            key={p.id}
-            draggable
-            onDragStart={(e) => {
-              e.dataTransfer.setData('participantId', p.id);
-            }}
-            className={styles.participantItem}
-          >
-            {p.name}
-          </p>
-        );
-      })}
+      {participants
+        .filter((participant) => participant.room === null) // Show participants without a room
+        .map((p) => (
+          <ParticipantCard key={p.id} participant={p} />
+        ))}
     </div>
   );
 };

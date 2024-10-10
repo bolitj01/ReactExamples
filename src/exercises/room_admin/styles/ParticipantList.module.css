@@ -1,16 +1,7 @@
 /* ParticipantList.module.css */
 .participantList {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .participantItem {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #ffffff;
-    cursor: grab;
-  }
-  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
