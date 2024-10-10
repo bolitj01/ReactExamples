@@ -1,0 +1,25 @@
+.card {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .title {
+    margin: 10px 0 0 0;
+    font-size: 1.2rem;
+  }
+  
