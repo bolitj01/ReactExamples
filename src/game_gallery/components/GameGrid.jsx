@@ -1,5 +1,4 @@
-import React from 'react';
-import GameCard from './GameCard.jsx';
+import GameCard from './GameCard';
 import styles from '../styles/GameGrid.module.css';
 
 const GameGrid = ({ games, selectGame }) => {

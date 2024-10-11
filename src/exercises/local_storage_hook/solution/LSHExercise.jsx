@@ -14,7 +14,7 @@ function LSHExercise() {
         onChange={(e) => setSearch(e.target.value)}
         placeholder="Enter your name"
       />
-      <h3>{localStorage.getItem(key)}</h3>
+      <h3>{search}</h3>
     </div>
   );
 }

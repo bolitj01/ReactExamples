@@ -1,0 +1,41 @@
+/* Common Table Styles */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .table th, .table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Dark Theme */
+  .darkTable {
+    background-color: #0d0a5d;
+    color: white;
+  }
+  
+  .darkTable .evenRow {
+    background-color: #4b0082; /* Dark purple */
+  }
+  
+  .darkTable .oddRow {
+    background-color: #808080; /* Gray */
+  }
+  
+  /* Light Theme */
+  .lightTable {
+    background-color: #97d0e1; /* Alice Blue */
+    color: black;
+  }
+  
+  .lightTable .evenRow {
+    background-color: #ffb6c1; /* Light Pink */
+  }
+  
+  .lightTable .oddRow {
+    background-color: #f0f8ff; /* Alice Blue */
+  }
+  

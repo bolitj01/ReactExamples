@@ -1,8 +1,10 @@
 .grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    padding: 20px;
-    justify-items: center;
-  }
-  
+  display: grid;
+  width: 60vw;
+  height: 60vh;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1vw;
+  padding: 20px;
+  justify-items: center;
+  margin: auto;
+}

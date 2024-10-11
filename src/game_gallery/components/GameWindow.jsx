@@ -1,20 +1,18 @@
-import React from 'react';
-import styles from '../styles/GameWindow.module.css';
+import { MdArrowBackIosNew } from "react-icons/md";
+import styles from "../styles/GameWindow.module.css";
 
-const GameWindow = ({ game, closeGame }) => {
+const GameWindow = ({ game, closeGame, children }) => {
   return (
     <div className={styles.window}>
       <div className={styles.header}>
+        <button onClick={closeGame} className={styles.closeButton}>
+          <MdArrowBackIosNew />
+          Back to Gallery
+        </button>
         <h2>{game.name}</h2>
-        <button onClick={closeGame} className={styles.closeButton}>Close</button>
       </div>
       <div className={styles.content}>
-        {/* Render game content here (game logic or iframe) */}
-        <p>Game: {game.name}</p>
-        <div className={styles.gameContent}>
-          {/* Placeholder for actual game implementation */}
-          <iframe src={game.url} title={game.name} className={styles.iframe}></iframe>
-        </div>
+        {children ? children : <p>Currently playing: {game.name}</p>}
       </div>
     </div>
   );
