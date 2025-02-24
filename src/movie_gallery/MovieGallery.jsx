@@ -13,7 +13,7 @@ const MovieGallery = () => {
 
   // Fetch movies on initial render
   useEffect(() => {
-    searchMovies("Batman");
+    searchMovies("Avengers");
   }, []);
 
   const searchMovies = async (title) => {
