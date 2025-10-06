@@ -1,4 +1,4 @@
-import styles from './ContactExercise.module.css';
+import styles from '../ContactExercise.module.css';
 import ViewContacts from './ViewContacts';
 
 function ContactExercise() {

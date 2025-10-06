@@ -55,6 +55,9 @@ function ExampleNavigator() {
         <h3 className={styles.speed1}>Exercises</h3>
         <ul>
           <li className={styles.speed2}>
+            <Link to="/rating">Emoji Rating</Link>
+          </li>
+          <li className={styles.speed2}>
             <Link to="/contact_list">Contact List</Link>
           </li>
           <li className={styles.speed3}>

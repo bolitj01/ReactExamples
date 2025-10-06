@@ -1,4 +1,4 @@
-import styles from "./LSHExercise.module.css";
+import styles from "../LSHExercise.module.css";
 import useLocalStorage from "./useLocalStorage";
 
 function LSHExercise() {
