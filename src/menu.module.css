@@ -1,34 +1,59 @@
-body {
+/* Scope all menu styles under .menu to avoid leaking to other components */
+.menu {
+  /* page-level styles that only apply when the menu is used as a top-level container */
   font-family: Arial, sans-serif;
   font-size: 1.5em;
-  background-color: #f0f0f0;
+  background: linear-gradient(135deg, #bbd3eb 0%, #e3e6f3 100%);
   margin: 0;
   padding: 0;
-  text-align: left;
 }
 
-ul,
-h3,
-h4 {
-  margin: 2vh;
+.menu ul,
+.menu h3,
+.menu h4 {
+  margin: 4vh;
   padding: 0;
-  text-align: left;
 }
 
-li {
+.menu li {
   list-style-type: none;
-  margin: 1vh 3vw;
-  text-align: left;
-  margin: 0;
+  margin: 1.5vh 3vw;
+  background: #c4f9ff;
+  border-radius: 6px;
+  padding: 0.5em 1em;
+  transition: background 0.3s;
 }
 
+.menu li:hover {
+  background: #e0e0f0;
+}
+
+.menu a {
+  color: #7c4fa6;
+  text-decoration: none;
+  transition: color 0.5s ease, font-size 0.5s ease;
+  font-weight: 500;
+}
+
+.menu a:hover {
+  color: #d50ce7;
+  text-decoration: underline;
+  font-size: 20pt;
+}
+
+/* Hide h3 and li initially */
+.menu h3,
+.menu h4,
+.menu li {
+  opacity: 0;
+}
 /* Animation to sway back and forth */
 @keyframes sway {
   0% {
-    transform: rotate(0deg);
+    transform: translateX(0);
   }
   100% {
-    transform: rotate(1deg);
+    transform: translateX(10px);
   }
 }
 /* Animation to fade in and move slightly */
@@ -45,68 +70,66 @@ li {
     opacity: 1;
   }
 }
+
 /* Add animation with higher delay per speed# class */
-.speed1 {
-  opacity: 0;
+.menu .speed1,
+.menu .speed2,
+.menu .speed3,
+.menu .speed4,
+.menu .speed5,
+.menu .speed6 {
   width: 25vw;
   animation: fadeIn 1s ease-out 0.1s forwards;
 }
-
-.speed2 {
-  opacity: 0;
-  width: 25vw;
-  animation: fadeIn 1s ease-out 0.2s forwards;
+.menu .speed2 {
+  animation-delay: 0.2s;
+}
+.menu .speed3 {
+  animation-delay: 0.3s;
+}
+.menu .speed4 {
+  animation-delay: 0.4s;
+}
+.menu .speed5 {
+  animation-delay: 0.5s;
+}
+.menu .speed6 {
+  animation-delay: 0.6s;
 }
 
-.speed3 {
-  opacity: 0;
-  width: 25vw;
-  animation: fadeIn 1s ease-out 0.3s forwards;
+.menu h3,
+.menu h4 {
+  color: #333ba3;
+  background: #e9f4fa;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  margin-bottom: 1vh;
+  box-shadow: 0 1px 4px rgba(180, 180, 200, 0.06);
+  animation: fadeIn 1s ease-out 0.1s forwards,
+    sway 1s ease-in-out alternate-reverse infinite !important;
 }
 
-.speed4 {
-  opacity: 0;
-  width: 25vw;
-  animation: fadeIn 1s ease-out 0.4s forwards;
+.menu section {
+  background: #80c7d0;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(180, 180, 200, 0.08);
+  margin: 3vh 6vw;
+  padding: 2vh 3vw;
+  transition: box-shadow 0.3s, border-color 0.3s;
+  border: 8px solid #c3c8e8;
 }
 
-.speed5 {
-  opacity: 0;
-  width: 25vw;
-  animation: fadeIn 1s ease-out 0.5s forwards;
+.menu section:hover {
+  box-shadow: 0 4px 24px rgba(180, 180, 200, 0.18);
+  border-color: #b2b7e2;
 }
 
-.speed6 {
-  opacity: 0;
-  width: 25vw;
-  animation: fadeIn 1s ease-out 0.6s forwards;
+.menu h1 {
+/* Keep h1 global because it's often used app-wide; provide an override under .menu if needed */
+/* If you want menu-specific h1, use `.menu h1 { ... }` instead. */
+  color: #2d3457;
+  text-align: center;
+  margin-top: 4vh;
+  margin-bottom: 2vh;
+  letter-spacing: 2px;
 }
-
-.speed7 {
-  opacity: 0;
-  width: 25vw;
-  animation: fadeIn 1s ease-out 0.7s forwards;
-}
-
-.speed8 {
-  opacity: 0;
-  width: 25vw;
-  animation: fadeIn 1s ease-out 0.8s forwards;
-}
-
-.speed9 {
-  opacity: 0;
-  width: 25vw;
-  animation: fadeIn 1s ease-out 0.9s forwards;
-}
-
-.speed10 {
-  opacity: 0;
-  width: 25vw;
-  animation: fadeIn 1s ease-out 1s forwards;
-}
-
-h3,
-h4 {
-  animation: fadeIn 1s ease-out 0.1s forwards, sway 1s ease-in-out alternate-reverse infinite !important;
-}/*# sourceMappingURL=menu.module.css.map */

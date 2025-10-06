@@ -4,7 +4,7 @@ import styles from "./menu.module.css"
 function ExampleNavigator() {
 
   return (
-    <>
+    <div className={styles.menu}>
       <h1>Examples</h1>
       <div className={styles.hide}>
         <h3 className={styles.speed1}>Introduction</h3>
@@ -86,7 +86,7 @@ function ExampleNavigator() {
           </li>
         </ul>
       </div>
-    </>
+    </div>
   )
 }
 

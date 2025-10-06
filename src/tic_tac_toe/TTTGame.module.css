@@ -1,0 +1,103 @@
+/* Styles for the Tic-Tac-Toe example (CSS module)
+   The JSX currently uses class names like "game", "game-board",
+   "game-info", "status", "board-row" and "square". Import this
+   module from the components (e.g. `import styles from './TTTGame.module.css'`)
+   and use `className={styles.game}` etc. or convert class strings to
+   module usage.
+*/
+
+.game {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #2d3457;
+  padding: 1.5rem;
+}
+
+.game-board {
+  /* board container -- keep it compact and centered */
+  display: inline-block;
+}
+
+.game-info {
+  min-width: 180px;
+  max-width: 320px;
+}
+
+.status {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.board-row {
+  display: flex;
+}
+
+.square {
+  width: 64px;
+  height: 64px;
+  background: #ffffff;
+  border: 2px solid #2d3457;
+  border-radius: 8px;
+  margin: 6px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d3457;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 120ms ease, transform 80ms ease;
+  user-select: none;
+}
+
+.square:hover {
+  background: #f0fbff;
+  transform: translateY(-2px);
+}
+
+.square:active {
+  transform: translateY(0);
+}
+
+.square[disabled],
+.square.disabled {
+  cursor: default;
+  opacity: 0.85;
+}
+
+.game-info ol {
+  padding-left: 1rem;
+  margin: 0;
+}
+
+.game-info li + li {
+  margin-top: 6px;
+}
+
+.game-info button {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(45,52,87,0.12);
+  background: #fff;
+  cursor: pointer;
+}
+
+.game-info button:hover {
+  background: #f4f6ff;
+}
+
+/* small responsive tweak */
+@media (max-width: 560px) {
+  .game {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .square {
+    width: 52px;
+    height: 52px;
+    margin: 4px;
+    font-size: 1.25rem;
+  }
+}
