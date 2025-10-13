@@ -82,13 +82,16 @@ function ExampleNavigator() {
             <Link to="/tic_tac_toe">Tic Tac Toe</Link>
           </li>
           <li className={styles.speed2}>
-            <Link to="/movie_gallery">Movie Gallery</Link>
-          </li>
-          <li className={styles.speed2}>
             <Link to="/room_admin">Room Admin</Link>
           </li>
           <li className={styles.speed2}>
             <Link to="/game_gallery">Game Gallery</Link>
+          </li>
+        </ul>
+        <h3 className={styles.speed1}>Actions & Suspense</h3>
+        <ul>
+          <li className={styles.speed2}>
+            <Link to="/message_board">Message Board</Link>
           </li>
         </ul>
       </div>

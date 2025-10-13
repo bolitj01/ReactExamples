@@ -16,6 +16,7 @@ import TTTGame from "./tic_tac_toe/TTTGame.jsx";
 import MovieGallery from "./side_effects/movie_gallery/MovieGallery.jsx";
 import ThemedApp from "./theme_context/ThemedApp.jsx";
 import GameGallery from "./game_gallery/GameGallery.jsx";
+import MessageBoard from "./actions_suspense/MessageBoard.jsx";
 
 const router = createBrowserRouter([
   {
@@ -78,6 +79,10 @@ const router = createBrowserRouter([
   {
     path: "/game_gallery",
     element: <GameGallery />,
+  },
+  {
+    path: "/message_board",
+    element: <MessageBoard />,
   }
   
 ]);
