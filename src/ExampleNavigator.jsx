@@ -28,6 +28,9 @@ function ExampleNavigator() {
           <li className={styles.speed4}>
             <Link to="/movie_gallery">Movie Gallery</Link>
           </li>
+          <li className={styles.speed5}>
+            <Link to="/layout_effect">Layout Effect</Link>
+          </li>
         </ul>
         <h4 className={styles.speed2}>Context</h4>
         <ul>

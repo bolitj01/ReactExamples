@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ExampleNavigator from "./ExampleNavigator.jsx";
 import Hello from "./hello_react/Hello.jsx";
 import ClockList from "./side_effects/clock/ClockList.jsx";
+import EffectComparison from "./side_effects/layout_effect/EffectComparison.jsx";
 import Rating from "./exercises/rating/Rating.jsx";
 import ContactExercise from "./exercises/contact_list/ContactExercise.jsx";
 import RoomAdmin from "./exercises/room_admin/RoomAdmin.jsx";
@@ -12,7 +13,7 @@ import PassingData from "./passing_data/PassingData.jsx";
 import SumHistory from "./sum_history/SumHistory.jsx";
 import Calculator from "./reducers/Calculator.jsx";
 import TTTGame from "./tic_tac_toe/TTTGame.jsx";
-import MovieGallery from "./movie_gallery/MovieGallery.jsx";
+import MovieGallery from "./side_effects/movie_gallery/MovieGallery.jsx";
 import ThemedApp from "./theme_context/ThemedApp.jsx";
 import GameGallery from "./game_gallery/GameGallery.jsx";
 
@@ -28,6 +29,14 @@ const router = createBrowserRouter([
   {
     path: "/clock_list",
     element: <ClockList />,
+  },
+  {
+    path: "/layout_effect",
+    element: <EffectComparison />,
+  },
+  {
+    path: "/movie_gallery",
+    element: <MovieGallery />,
   },
   {
     path: "/passing_data",
@@ -57,10 +66,7 @@ const router = createBrowserRouter([
     path: "/calculator",
     element: <Calculator />,
   },
-  {
-    path: "/movie_gallery",
-    element: <MovieGallery />,
-  },
+  
   {
     path: "/theme_context",
     element: <ThemedApp />,
