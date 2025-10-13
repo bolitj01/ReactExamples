@@ -12,9 +12,6 @@ function ExampleNavigator() {
           <li className={styles.speed2}>
             <Link to="/hello_react">Hello React</Link>
           </li>
-          <li className={styles.speed3}>
-            <Link to="/simple">Simple</Link>
-          </li>
         </ul>
         <h3 className={styles.speed1}>Passing Data</h3>
         <ul>
@@ -26,6 +23,9 @@ function ExampleNavigator() {
         <h4 className={styles.speed2}>Effects</h4>
         <ul>
           <li className={styles.speed3}>
+            <Link to="/clock_list">Clock List</Link>
+          </li>
+          <li className={styles.speed4}>
             <Link to="/movie_gallery">Movie Gallery</Link>
           </li>
         </ul>

@@ -1,0 +1,26 @@
+.app {
+  text-align: center;
+}
+
+.input {
+  width: 100px;
+}
+
+.button {
+  padding-left: 12px;
+}
+
+.clockList {
+  margin-top: 12px;
+}
+
+.clock {
+  border: 1px solid #ddd;
+  padding: 8px;
+  margin-bottom: 8px;
+}
+
+.clockHeader {
+  font-size: 12px;
+  color: #666;
+}

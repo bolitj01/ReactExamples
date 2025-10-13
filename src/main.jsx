@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ExampleNavigator from "./ExampleNavigator.jsx";
 import Hello from "./hello_react/Hello.jsx";
-import Simple from "./simple/Simple.jsx";
+import ClockList from "./side_effects/clock/ClockList.jsx";
 import Rating from "./exercises/rating/Rating.jsx";
 import ContactExercise from "./exercises/contact_list/ContactExercise.jsx";
 import RoomAdmin from "./exercises/room_admin/RoomAdmin.jsx";
@@ -26,8 +26,8 @@ const router = createBrowserRouter([
     element: <Hello />,
   },
   {
-    path: "/simple",
-    element: <Simple />,
+    path: "/clock_list",
+    element: <ClockList />,
   },
   {
     path: "/passing_data",

@@ -3,7 +3,7 @@ import styles from '../rating.module.css';
 
 const EMOJIS = ["😠", "😕", "😐", "🙂", "🤩"];
 
-export default function RatingSelect({ rating, onSelect }) {
+export default function RatingSelect({ rating, setRating }) {
   return (
     <div role="radiogroup" aria-label="Emoji rating" className={styles.row}>
       {EMOJIS.map((emoji, idx) => {
@@ -15,7 +15,7 @@ export default function RatingSelect({ rating, onSelect }) {
             type="button"
             role="radio"
             aria-checked={selected}
-            onClick={() => onSelect(value)}
+            onClick={() => setRating(value)}
             className={`${styles.emojiBtn} ${selected ? styles.selected : ''}`}
             title={`${value} star${value > 1 ? 's' : ''}`}
           >

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from '../rating.module.css';
 
-export default function Feedback({ rating, onSubmit: parentOnSubmit }) {
+export default function Feedback({ rating }) {
   const [feedback, setFeedback] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
@@ -11,7 +11,6 @@ export default function Feedback({ rating, onSubmit: parentOnSubmit }) {
   function handleSubmit(e) {
     e.preventDefault();
     setSubmitted(true);
-    if (parentOnSubmit) parentOnSubmit(feedback);
   }
 
   /* TODO - Decide when to show each portion of JSX based
