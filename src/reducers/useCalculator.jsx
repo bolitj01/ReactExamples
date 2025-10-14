@@ -1,13 +1,31 @@
-import { useState } from "react";
+import { useReducer } from "react";
 
 const useCalculator = (init) => {
-    const [value, setValue] = useState(init);
-    const add = (op) => setValue(value + Number(op));
-    const subtract = (op) => setValue(value - Number(op));
-    const multiply = (op) => setValue(value * Number(op));
-    const divide = (op) => setValue(value / Number(op));
-    const reset = () => setValue(0);
-    return [value, add, subtract, multiply, divide, reset];
-}
+  const reducer = (state, action) => {
+    action.payload = parseInt(action.payload);
+    switch (action.type) {
+      case "ADD":
+        return state + action.payload;
+      case "SUBTRACT":
+        return state - action.payload;
+      case "MULTIPLY":
+        return state * action.payload;
+      case "DIVIDE":
+        return state / action.payload;
+      case "RESET":
+        return initialValue;
+      default:
+        return state;
+    }
+  };
+
+  const [value, dispatch] = useReducer(reducer, init);
+
+  const calculation = (operation, value) => {
+    dispatch({ type: operation, payload: value });
+  };
+
+  return [value, calculation];
+};
 
 export default useCalculator;
