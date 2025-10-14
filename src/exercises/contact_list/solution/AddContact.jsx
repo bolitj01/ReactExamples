@@ -1,13 +1,15 @@
 import { useState, useRef } from "react";
+import styles from "../ContactExercise.module.css";
 
 const AddContact = ({ addContact }) => {
   //State?
-  const nameTxt = useRef()
-  const phoneTxt = useRef()
+  const nameTxt = useRef();
+  const phoneTxt = useRef();
   //Event Handlers?
 
   return (
     <form
+      className={styles.addContact}
       onSubmit={(e) => {
         e.preventDefault();
       }}
@@ -30,7 +32,11 @@ const AddContact = ({ addContact }) => {
         placeholder="###-###-####"
         ref={phoneTxt}
       />
-      <button onClick={() => addContact(nameTxt.current.value, phoneTxt.current.vaue)}>Add Contact</button>
+      <button
+        onClick={() => addContact(nameTxt.current.value, phoneTxt.current.vaue)}
+      >
+        Add Contact
+      </button>
     </form>
   );
 };

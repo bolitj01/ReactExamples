@@ -6,7 +6,7 @@ import Hello from "./hello_react/Hello.jsx";
 import ClockList from "./side_effects/clock/ClockList.jsx";
 import EffectComparison from "./side_effects/layout_effect/EffectComparison.jsx";
 import Rating from "./exercises/rating/Rating.jsx";
-import ContactExercise from "./exercises/contact_list/ContactExercise.jsx";
+import ContactExercise from "./exercises/contact_list/solution/ContactExercise.jsx";
 import RoomAdmin from "./exercises/room_admin/RoomAdmin.jsx";
 import LSHExercise from "./exercises/local_storage_hook/LSHExercise.jsx";
 import PassingData from "./passing_data/PassingData.jsx";

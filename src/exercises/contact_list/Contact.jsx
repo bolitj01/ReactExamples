@@ -1,14 +1,15 @@
-const Contact = ({contact, removeContact }) => {
-    
-    //Needs an event handler
+import styles from "./ContactExercise.module.css";
 
-    return (
-        <>
-            <span>{contact.name}</span>
-            <span>{contact.phone}</span>
-            <span>Delete</span>
-        </>
-    )
-}
+const Contact = ({ contact, removeContact }) => {
+  //Needs an event handler
 
-export default Contact
+  return (
+    <div className={styles.contact}>
+      <span>{contact.name}</span>
+      <span>{contact.phone}</span>
+      <button className={styles.deleteButton}>Delete</button>
+    </div>
+  );
+};
+
+export default Contact;
