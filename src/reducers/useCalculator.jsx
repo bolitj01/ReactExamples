@@ -13,7 +13,7 @@ const useCalculator = (init) => {
       case "DIVIDE":
         return state / action.payload;
       case "RESET":
-        return initialValue;
+        return init;
       default:
         return state;
     }
